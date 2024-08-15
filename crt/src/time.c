@@ -1,5 +1,5 @@
 #include "time.h"
-#include "freestand/cmos.h"
+#include "../../freestand/cpu/include/cmos.h"
 
 static int days_in_month[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
