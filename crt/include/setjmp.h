@@ -3,6 +3,12 @@
 #ifndef _SETJMP_H
 #define _SETJMP_H
 
+/**
+ * @brief Provides declarations for setjmp and longjmp functions.
+ *
+ * This header includes architecture-specific definitions for saving and restoring the execution context.
+ */
+
 #if defined(__x86__)
     #include "../arch/x86/setjmp.h"
 #elif defined(__x64__)
