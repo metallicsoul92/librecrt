@@ -11,18 +11,32 @@
 #define __HAS_POSIX_SYS_TYPES
 #endif
 
-// Structure for time of day
+/**
+ * @brief Defines structures and functions for time and date operations.
+ *
+ * This header provides structures for representing time and functions to retrieve the current time.
+ */
+
+/**
+ * @brief Structure representing the time of day.
+ *
+ * This structure holds the number of seconds and microseconds since the Epoch.
+ */
 struct timeval {
-    time_t tv_sec;  // seconds
-    long tv_usec;   // microseconds
+    time_t tv_sec;  /**< Seconds */
+    long tv_usec;   /**< Microseconds */
 };
 
-// Structure for timezone (not really used in freestanding)
+/**
+ * @brief Structure representing the timezone.
+ *
+ * This structure holds information about the time zone, including the minutes west of Greenwich and daylight saving time.
+ */
 struct timezone {
-    int tz_minuteswest; // minutes west of Greenwich
-    int tz_dsttime;     // type of DST correction
+    int tz_minuteswest; /**< Minutes west of Greenwich */
+    int tz_dsttime;     /**< Type of DST correction */
 };
 
-int gettimeofday(struct timeval *tv, struct timezone *tz);
+int gettimeofday(struct timeval *tv, struct timezone *tz); /**< Retrieves the current time of day */
 
 #endif // SYS_TIME_H

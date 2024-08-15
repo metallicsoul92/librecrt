@@ -6,11 +6,17 @@
 #define __HAS_POSIX_SYS_TYPES
 #endif
 
-#define EPOLLIN  0x001
-#define EPOLLOUT 0x004
+/**
+ * @brief Defines constants and functions for the epoll API.
+ *
+ * The epoll API is used for scalable I/O event notification on file descriptors.
+ */
 
-int epoll_create(int size);
-int epoll_ctl(int epfd, int op, int fd, struct epoll_event *event);
-int epoll_wait(int epfd, struct epoll_event *events, int maxevents, int timeout);
+#define EPOLLIN  0x001  /**< There is data to read */
+#define EPOLLOUT 0x004  /**< Writing is possible */
+
+int epoll_create(int size);  /**< Creates an epoll instance */
+int epoll_ctl(int epfd, int op, int fd, struct epoll_event *event); /**< Controls an epoll instance */
+int epoll_wait(int epfd, struct epoll_event *events, int maxevents, int timeout); /**< Waits for I/O events */
 
 #endif // SYS_EPOLL_H
