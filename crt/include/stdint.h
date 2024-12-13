@@ -3,6 +3,12 @@
 #ifndef _STDINT_H
 #define _STDINT_H
 
+/**
+ * @brief Defines exact-width integer types and their corresponding limits.
+ *
+ * This header includes architecture-specific definitions for integer types with specified widths, such as `int8_t`, `int16_t`, and `int32_t`.
+ */
+
 #if defined(__x86__)
     #include "../arch/x86/stdint.h"
 #elif defined(__x64__)

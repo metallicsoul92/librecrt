@@ -3,6 +3,12 @@
 #ifndef _FLOAT_H
 #define _FLOAT_H
 
+/**
+ * @brief Defines constants for floating-point arithmetic.
+ *
+ * This header includes architecture-specific floating-point limits and properties.
+ */
+
 #if defined(__x86__)
     #include "../arch/x86/float.h"
 #elif defined(__x64__)

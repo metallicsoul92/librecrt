@@ -3,6 +3,12 @@
 #ifndef _STDDEF_H
 #define _STDDEF_H
 
+/**
+ * @brief Defines common types and macros used in C programs.
+ *
+ * This header includes architecture-specific definitions for types like `size_t`, `ptrdiff_t`, and the `NULL` macro.
+ */
+
 #if defined(__x86__)
     #include "../arch/x86/stddef.h"
 #elif defined(__x64__)
